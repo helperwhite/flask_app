@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="jumbotron">
+		<div class="container">
+			{% if forecast %}
+				<h1>The Weather in your city is: {{ forecast }} </h1>
+				<a href="{{ url_for("index") }}">Check another address</a>
+			{% else %}
+				<h1>Hello! Which city are you lived in?</h1>
+				<form action="/" class="form-inline">
+					<div class="form-group">
+						<input type="text" name="address" placeholder="City, State:" class="form-control">
+					</div>
+						<input type="submit" value="Submit" class="btn btn-primary">
+				</form>
+			{% endif %}
+			<a href="{{ url_for('about') }}"> about </a>
+		</div>
+	</div>>
+</body>
+</html>>
